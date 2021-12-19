@@ -1,0 +1,166 @@
+header {
+  background-color: #ff0157;
+  width: 100%;
+  display: flex;
+  height: 80px;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+.titulo {
+  display: flex;
+}
+
+h1 {
+  display: flex;
+  color: white;
+  display: flex;
+  font-size: 30px;
+  height: 60px;
+  font-weight: 800;
+}
+body {
+  background-image: url(/images/seguridad.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*box-sizing: border-box;*/
+  font-family: "Poppins", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.15);
+  padding-top: 30px;
+  padding-bottom: 30px;
+  width: 100%;
+  min-height: 100vh;
+}
+.contenedor {
+  width: 500px;
+  height: 500px;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  /*align-items: center;*/
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.8);
+  border-radius: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.contenedor h2 {
+  color: #fff;
+  text-align: center;
+  font-size: 30px;
+}
+.input-box {
+  position: relative;
+}
+.input-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+/*.input-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  letter-spacing: 1px;
+  pointer-events: none;
+  transition: 0.5s;
+}
+/*.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #03a9f4;
+  font-size: 12px;
+}*/
+.login-box {
+  display: flex;
+  justify-content: center;
+}
+.login-box input {
+  display: flex;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #03a9f4;
+  padding: 10px 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+.forget {
+  color: #fff;
+  margin-bottom: 5px;
+}
+.forget a {
+  color: #03a9f4;
+  margin-left: 10px;
+}
+footer {
+  background: #ff0157;
+}
+.footer-content {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  justify-content: center;
+}
+.social-media a {
+  text-decoration: none;
+  align-items: center;
+}
+
+.contact-us {
+  width: 40%;
+  color: white;
+}
+.footertitulo {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.socila-media {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+.redes-icon {
+  display: inline-block;
+  margin-left: 20px;
+  width: 50px;
+  height: 50px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  text-align: center;
+  color: #fff;
+}
+.redes-icon:hover {
+  background: white;
+  color: #ff0157;
+}
+
+.redes-icon i {
+  font-size: 30px;
+  line-height: 50px;
+}
