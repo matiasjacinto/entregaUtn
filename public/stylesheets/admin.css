@@ -164,3 +164,6 @@ footer {
   font-size: 30px;
   line-height: 50px;
 }
+.error {
+  color: #e8160c;
+}

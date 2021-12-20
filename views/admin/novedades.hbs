@@ -1,7 +1,8 @@
 <div class="postition">
   <div class="box">
     <div class="contenedor">
-      <h2>Login</h2>
+      <h2>bienvenido a novedades {{usuario}}!!</h2>
+      <p>ya puedes cargar las nuevas novedades</p>
       <form action="/admin/login" method="post">
         <div class="input-box">
           <input type="text" id="usuario" name="usuario" required />
@@ -14,13 +15,12 @@
         <div class="login-box">
           <input type="submit" value="Enviar" />
         </div>
-        <p class="forget">olvido su clave? <a href="#">Click aca</a></p>
-        <p class="forget">no esta registrado? <a href="#">registrarse</a></p>
+        <!-- <p class="forget">olvido su clave? <a href="#">Click aca</a></p>
+        <p class="forget">no esta registrado? <a href="#">registrarse</a></p>-->
 
       </form>
-      {{#if error}}
-        <p class="error">usuario y/o contraseña incorrectos</p>
-      {{/if}}
+      <a href="">Cerrar sesion<i class="fas fa-sign-out-alt"></i></a>
     </div>
+
   </div>
 </div>

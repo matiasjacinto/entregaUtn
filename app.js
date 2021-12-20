@@ -5,9 +5,11 @@ var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 
 require("dotenv").config();
+var session = require("express-session");
 
 var indexRouter = require("./routes/index");
 var loginRouter = require("./routes/admin/login");
+var adminNovedadesRouter = require("./routes/admin/novedades");
 
 var app = express();
 
@@ -21,8 +23,30 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
+app.use(
+  session({
+    secret: "holaholaholaholahola",
+    resave: false,
+    saveUninitialized: true,
+    //cookie: { maxAge: 60000 },
+  })
+);
+
+secured = async function (req, res, next) {
+  try {
+    console.log(req.session.id_usuario);
+    if (req.session.id_usuario) {
+      next();
+    } else {
+      res.redirect("/admin/login");
+    }
+  } catch (error) {
+    console.log(error);
+  }
+};
 app.use("/", indexRouter);
 app.use("/admin/login", loginRouter);
+app.use("/admin/novedades", secured, adminNovedadesRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
