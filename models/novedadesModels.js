@@ -4,4 +4,15 @@ async function getNovedades() {
   var rows = await pool.query(query);
   return rows;
 }
-module.exports = { getNovedades };
+
+async function insertAdmiNovedad(obj) {
+  try {
+    var query = "insert into adminovedades set ?";
+    var rows = await pool.query(query, [obj]);
+    return rows;
+  } catch (error) {
+    console.log(error);
+    throw error;
+  }
+}
+module.exports = { getNovedades, insertAdmiNovedad };
