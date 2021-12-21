@@ -15,4 +15,10 @@ async function insertAdmiNovedad(obj) {
     throw error;
   }
 }
-module.exports = { getNovedades, insertAdmiNovedad };
+async function deleteNovedadByID(id) {
+  var query = "delete from adminovedades where id=?";
+  var rows = await pool.query(query, [id]);
+  return rows;
+}
+
+module.exports = { getNovedades, insertAdmiNovedad, deleteNovedadByID };

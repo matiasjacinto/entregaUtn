@@ -49,4 +49,10 @@ router.post("/agregar", async function (req, res, next) {
       };
   }
 });
+
+router.get("/eliminar/:id", async function (req, res, next) {
+  var id = req.params.id;
+  await novedadesModel.deleteNovedadByID(id);
+  res.redirect("/admin/novedades");
+});
 module.exports = router;
