@@ -1,26 +1,41 @@
 <div class="postition">
   <div class="box">
     <div class="contenedor">
-      <h2>bienvenido a novedades {{usuario}}!!</h2>
-      <p>ya puedes cargar las nuevas novedades</p>
-      <form action="/admin/login" method="post">
-        <div class="input-box">
-          <input type="text" id="usuario" name="usuario" required />
-          <label for="usuario">Nombre de usuario</label>
-        </div>
-        <div class="input-box">
-          <input type="password" id="password" name="password" required />
-          <label for="password">Contraseña</label>
-        </div>
-        <div class="login-box">
-          <input type="submit" value="Enviar" />
-        </div>
-        <!-- <p class="forget">olvido su clave? <a href="#">Click aca</a></p>
-        <p class="forget">no esta registrado? <a href="#">registrarse</a></p>-->
-
-      </form>
-      <a href="">Cerrar sesion<i class="fas fa-sign-out-alt"></i></a>
+      <h3 class="tituloNovedades">Bienvenido a Novedades
+        <span>{{usuario}}!!</span></h3>
+      <p class="parrafo">ya puedes cargar las nuevas novedades</p>
+      <div>
+        <table>
+          <thead>
+            <tr>
+              <td>Id</td>
+              <td>Titulo</td>
+              <td>Acciones</td>
+            </tr>
+          </thead>
+          {{#each novedades}}
+            <tr>
+              <td>{{id}}</td>
+              <td>{{titulo}}</td>
+              <td>
+                <a href="" class="anovedades">Modificar
+                  <i class="fas fa-pencil-alt"></i></a>
+                <a href="" class="anovedades">Eliminar
+                  <i class="fas fa-trash-alt"></i></a>
+              </td>
+            </tr>
+          {{/each}}
+        </table>
+      </div>
+      <div class="agregarnovedades">
+        <a href="" class="anovedades">Agregar <i class="fas fa-plus"></i></a>
+      </div>
+      <div class="cerrar">
+        <p class="cerrarsesion">Cerrar sesion<a><i
+              class="fas fa-sign-out-alt"
+            ></i></a>
+        </p>
+      </div>
     </div>
-
   </div>
 </div>

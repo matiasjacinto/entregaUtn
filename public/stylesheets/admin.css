@@ -42,7 +42,7 @@ a {
 }
 .contenedor {
   width: 500px;
-  height: 500px;
+
   background-color: rgba(0, 0, 0, 0.6);
   padding: 40px;
   display: flex;
@@ -166,4 +166,50 @@ footer {
 }
 .error {
   color: #e8160c;
+}
+/*novedades admin*/
+.tituloNovedades {
+  font-size: 26px;
+  color: #ff0157;
+  text-align: center;
+}
+.tituloNovedades span {
+  color: #fff;
+}
+.parrafo {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.fas,
+.cerrarsesion {
+  color: #e8160c;
+  cursor: pointer;
+}
+.cerrar {
+  display: flex;
+  justify-content: flex-end;
+}
+thead {
+  color: white;
+  background-color: #ff0157;
+}
+td {
+  text-align: right;
+  color: white;
+}
+table {
+  margin-bottom: 60px;
+}
+.fa-pencil-alt,
+.fa-plus,
+.fa-trash-alt {
+  color: white;
+}
+.anovedades {
+  color: white;
+}
+.agregarnovedades {
+  display: flex;
+  justify-content: center;
 }
