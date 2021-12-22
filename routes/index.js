@@ -3,9 +3,40 @@ const { getMaxListeners } = require("../app");
 var router = express.Router();
 var nodemailer = require("nodemailer");
 
+/* ruta novedades */
+var novedadesModels = require("../models/novedadesModels");
+
+/* ruta cloudinary*/
+var cloudinary = require("cloudinary").v2;
+
 /* GET home page. */
-router.get("/", function (req, res, next) {
-  res.render("index", { title: "Express" });
+router.get("/", async function (req, res, next) {
+  var novedades = await novedadesModels.getNovedades();
+
+  novedades = novedades.map((novedad) => {
+    if (novedad.img_id) {
+      const imagen = cloudinary.url(novedad.img_id, {
+        width: 300,
+        height: 300,
+        crop: "pad",
+      });
+
+      return {
+        ...novedad,
+        imagen,
+      };
+    } else {
+      return {
+        ...novedad,
+        imagen: "",
+      };
+    }
+  });
+
+  res.render("index", {
+    title: "Express",
+    novedades,
+  });
 });
 
 router.post("/index", async function (req, res, next) {

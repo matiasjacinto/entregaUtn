@@ -3,7 +3,7 @@
     <div class="contenedor">
       <h3 class="tituloagregar">Agregar Novedades
       </h3>
-      <form action="/admin/novedades/agregar" method="post">
+      <form action="/admin/novedades/agregar" method="post" enctype="multipart/form-data">
         <div class="input-box">
           <input type="text" id="titulo" name="titulo" />
           <label for="titulo">titulo</label>
@@ -17,6 +17,9 @@
           <textarea type="text" id="cuerpo" name="cuerpo" ></textarea>
           <label for="cuerpo">Contenido</label>
 
+        </div>
+        <div class="input-box">
+          <label>imagen: <input type='file' name='imagen'></label>
         </div>
 
         <div class="login-box">

@@ -441,6 +441,19 @@
   <div class="titulo sugerencia">
     <h2 class="titulotext">Sugerencia del <span>C</span>hef</h2>
   </div>
+  <main class="holder">
+    {{#each novedades}}
+      <div class="novedades">
+
+        <h3>{{titulo}}</h3>
+        <h4>{{subtitulo}}</h4>
+        <p>{{cuerpo}}</p>
+        {{#if imagen}}
+          <img src="{{imagen}}" />
+        {{/if}}
+      </div>
+    {{/each}}
+  </main>
 </section>
 <section class="comentario" id="comentarios">
   <div class="titulo clientes">
