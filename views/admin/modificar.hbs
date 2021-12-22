@@ -3,8 +3,8 @@
     <div class="contenedor">
       <h3 class="tituloagregar">Modificar Novedades
       </h3>
-      <form action="/admin/novedades/modificar" method="post">
-      <input type="hidden" name='id' value={{novedad.id}}>
+      <form action="/admin/novedades/modificar"       method="post" enctype="multipart/form-data">
+       <input type="hidden" name='id' value={{novedad.id}}>
         <div class="input-box">
           <input type="text" id="titulo" name="titulo" value='{{novedad.titulo}}'/>
           <label for="titulo">titulo</label>
@@ -17,6 +17,16 @@
         <div class="input-box">
           <textarea type="text" id="cuerpo" name="cuerpo" >{{novedad.cuerpo}}</textarea>
           <label for="cuerpo">Contenido</label>
+        </div>
+        <div class="input-box">
+          <p>Imagen <input type="file" name="imagen"></p>
+          <p>
+            <label>
+              <input type="checkbox"   name="img_delete" id='identificador'value="1"> 
+            <span>Eliminar imagen</span>
+            </label>
+            <input type="hidden" name="img_original" value="{{novedad.img_id}}">
+          </p>
 
         </div>
 
@@ -25,7 +35,7 @@
         </div>
         {{#if message}}
         <p>{{message}}</p>
-      {{/if}}
+        {{/if}}
 
       </form>
       
